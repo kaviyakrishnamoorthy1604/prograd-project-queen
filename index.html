@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queen</title>
+</head>
+
+<body>
+    <script>
+        // Checkpoint 1 | Creating the queen object
+        var queen = {
+            direction: "s",
+            position: [4, 0],
+
+        }
+
+        // Checkpoint 2 | Turning the queen
+        function changeDirection(direction) {
+
+            switch (direction) {
+
+                case 1:
+                    direction = "s"
+                    break;
+                case 2:
+                    direction = "n"
+                    break;
+                case 3:
+                    direction = "e"
+                    break;
+                case 4:
+                    direction = "w"
+                    break;
+                case 5:
+                    direction = "ne"
+                    break;
+                case 6:
+                    direction = "nw"
+                    break;
+                case 7:
+                    direction = "se"
+                    break;
+                case 8:
+                    direction = "sw"
+                    break;
+                default:
+                    direction = "s"
+                    break;
+            }
+
+        }
+        // Checkpoint 3 | Moving the queen forward
+        function moveForward() {
+            let xcoordinate = queen - position();
+            let ycoordinate = queen - position();
+            queen - position = [xcoordinate, ycoordinate];
+            updatePosition(queen - position);
+            console.log(queen - position);
+        }
+        // Checkpoint 4 | Jump move the queen
+        function jumpMoveForward() {
+            let xcoordinate = queen - position();
+            let ycoordinate = queen - position();
+            queen - position = [xcoordinate, ycoordinate];
+            updatePosition(queen - position);
+            console.log(queen - position);
+        }
+        // Checkpoint 5 |  Tracking the position
+        function updatePosition(position) {
+            console.log(queen - position);
+        }
+    </script>
+
+</body>
+
+</html>
